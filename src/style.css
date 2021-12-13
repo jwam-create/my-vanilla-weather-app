@@ -13,7 +13,7 @@ body {
 	background-color: #f9f7fe;
 }
 form {
-	margin-top: 40px;
+	margin-top: 30px;
 	border-bottom: 1px solid #f9f7fe;
 	padding-bottom: 30px;
 }
@@ -23,6 +23,9 @@ h1 {
 ul {
 	list-style-type: none;
 	padding: 0;
+}
+p {
+	margin: 0;
 }
 
 .weather-app .search-input {
@@ -44,6 +47,9 @@ ul {
 	border: none;
 	height: 50px;
 	display: inline-block;
+}
+.weather-info {
+	margin-top: 20px;
 }
 ul li strong {
 	color: #66dee2;
@@ -71,6 +77,12 @@ ul li strong {
 	top: -34px;
 }
 
+.weather-forecast {
+	text-align: center;
+	margin: 40px 0;
+	border-bottom: 1px solid #f9f7fe;
+	padding-bottom: 50px;
+}
 .weather-forecast-preview {
 	text-align: center;
 }
@@ -98,4 +110,17 @@ ul li strong {
 .weather-forecast .forecast-temperature-min {
 	margin-left: 10px;
 	opacity: 0.6;
+}
+
+.weather-app footer {
+	font-size: 14px;
+	margin-top: 40px;
+	line-height: 18px;
+	text-align: center;
+	color: rgba(39, 33, 66, 0.4);
+}
+.weather-app footer a {
+	color: #885df1;
+	text-decoration: none;
+	background-color: transparent;
 }
