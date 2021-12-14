@@ -56,6 +56,10 @@ ul li strong {
 	font-weight: 500;
 }
 
+.weather-info #description {
+	text-transform: capitalize;
+}
+
 .weather-app canvas {
 	display: block;
 	margin: 10px 0;
