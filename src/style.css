@@ -60,9 +60,11 @@ ul li strong {
 	text-transform: capitalize;
 }
 
-.weather-app canvas {
+.weather-app #icon {
 	display: block;
 	margin: 10px 0;
+	max-width: 100%;
+	height: auto;
 }
 .weather-app .temperature {
 	color: #212121;
