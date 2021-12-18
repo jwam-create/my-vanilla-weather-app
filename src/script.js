@@ -14,7 +14,7 @@ function displayTemperature(response) {
 	descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
-let city = "London";
+let city = "Kitchener";
 
 let apiKey = "3ef1c4739274de1e0c3fc584c54fc2ec";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
