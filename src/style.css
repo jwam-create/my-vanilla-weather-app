@@ -82,6 +82,14 @@ ul li strong {
 	line-height: 1;
 	top: -34px;
 }
+.weather-app a {
+	text-decoration: none;
+}
+
+.units .active {
+	color: #5f5f5f;
+	cursor: default;
+}
 
 .weather-forecast {
 	text-align: center;
