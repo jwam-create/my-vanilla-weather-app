@@ -52,10 +52,10 @@ function displayForecast(response) {
 							<div class="forecast-temperature">
 								<span class="forecast-temperature-max">${Math.round(
 									forecastDay.temp.max
-								)}°</span>
+								)}°C</span>
 								<span class="forecast-temperature-min">${Math.round(
 									forecastDay.temp.min
-								)}°</span>
+								)}°C</span>
 							</div>
 						</div>
 					</div>`;
@@ -81,8 +81,6 @@ function displayTemperature(response) {
 	let descriptionElement = document.querySelector("#description");
 	let dateElement = document.querySelector("#date");
 	let iconElement = document.querySelector("#icon");
-
-	celsiusTemperature = Math.round(response.data.main.temp);
 
 	cityElement.innerHTML = response.data.name;
 	temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -115,32 +113,5 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-input");
 form.addEventListener("submit", handleSubmit);
-
-function displayFarenheit(event) {
-	event.preventDefault();
-
-	let farenheitTemperature = Math.round(celsiusTemperature * (9 / 5) + 32);
-	temperatureElement = document.querySelector("#temperature");
-	temperatureElement.innerHTML = farenheitTemperature;
-	celsiusLink.classList.remove("active");
-	farenheitLink.classList.add("active");
-}
-
-function displayCelsius(event) {
-	event.preventDefault();
-
-	temperatureElement = document.querySelector("#temperature");
-	temperatureElement.innerHTML = celsiusTemperature;
-	farenheitLink.classList.remove("active");
-	celsiusLink.classList.add("active");
-}
-
-let celsiusTemperature = null;
-
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", displayFarenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsius);
 
 search("Paris");
